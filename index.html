@@ -4,40 +4,53 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Late Nights Tools — JobScout, Genius Scout, Contact Tracker</title>
-<meta name="description" content="Trois outils gratuits et open source : JobScout (recherche d'emploi + CV IA), Genius Scout (Instagram des producteurs d'un album), Contact Tracker (CRM de prospection musicale). Versions Pro en installeur 1-clic.">
+<meta name="description" content="Le catalogue Late Nights Tools : des outils gratuits et open source (recherche d'emploi, placement de prods, prospection musicale), avec une version Pro en installeur 1-clic. Tout récupérer d'un coup.">
 <link rel="stylesheet" href="assets/style.css">
+<script src="assets/theme.js"></script>
+<script src="assets/tools.js"></script>
 </head>
 <body>
 <header class="top"><div class="wrap">
   <a class="brand" href="./">Late Nights <span>Tools</span></a>
-  <nav><a href="jobscout/">JobScout</a><a href="genius-scout/">Genius Scout</a><a href="contact-tracker/">Contact Tracker</a><a href="https://github.com/latenightsbeats1208-pixel">GitHub</a></nav>
+  <nav id="nav"><a href="#produits">Outils</a><a href="#tout">Tout récupérer</a><a href="#offre">Gratuit / Pro</a><a href="https://github.com/latenightsbeats1208-pixel">GitHub</a><button class="theme-toggle" type="button">🌙</button></nav>
 </div></header>
 
 <div class="hero"><div class="wrap">
   <div class="tag">Gratuit · open source · données 100 % locales</div>
-  <h1>Trois outils que j'ai construits pour moi.<br>Ils sont à vous.</h1>
-  <p class="lead">Le code source est public et gratuit. La version Pro, c'est le même outil sans installation à faire : un installeur Windows, les mises à jour, et pour JobScout l'IA incluse.</p>
-  <div class="cta"><a class="btn primary" href="#produits">Voir les outils</a><a class="btn" href="https://github.com/latenightsbeats1208-pixel">Le code sur GitHub</a></div>
+  <h1>Des outils que j'ai construits pour moi.<br>Ils sont à vous.</h1>
+  <p class="lead">Le code source est public et gratuit. La version Pro, c'est le même outil sans installation à faire : un installeur Windows, les mises à jour, et pour JobScout l'IA incluse. Chaque nouvel outil arrive ici.</p>
+  <div class="cta"><a class="btn primary" href="#produits">Voir les outils</a><a class="btn" href="#tout">Tout récupérer d'un coup</a></div>
 </div></div>
 
 <section id="produits"><div class="wrap products">
   <h2>Les outils</h2>
   <p>Chacun tourne sur votre machine. Rien n'est envoyé sur un serveur à moi.</p>
-  <div class="grid">
-    <div class="card"><div class="ico">🎯</div><h3>JobScout</h3><p>Scanne 7 sites d'emploi (LinkedIn, Welcome to the Jungle, APEC, HelloWork, France Travail, Talent.com, Civiweb V.I.E), note chaque offre selon votre profil, et génère un CV + une lettre de motivation ATS d'une page, dans la langue de l'offre, sans rien inventer.</p><div class="spacer"></div><div class="links"><a class="btn primary" href="jobscout/">Découvrir</a><a class="btn" href="https://github.com/latenightsbeats1208-pixel/jobscout">Code</a></div></div>
-    <div class="card"><div class="ico">🎛️</div><h3>Genius Scout</h3><p>Collez un album. Genius Scout croise Genius, Spotify, MusicBrainz et Discogs pour lister les producteurs de chaque titre, puis retrouve et vérifie leur compte Instagram. Pour placer vos prods auprès des bonnes personnes.</p><div class="spacer"></div><div class="links"><a class="btn primary" href="genius-scout/">Découvrir</a><a class="btn" href="https://github.com/latenightsbeats1208-pixel/genius-scout">Code</a></div></div>
-    <div class="card"><div class="ico">📇</div><h3>Contact Tracker</h3><p>Le CRM de prospection pour vendre des prods ou un accompagnement artiste : pipeline en 11 étapes, relances datées, scripts de DM et d'appel, entonnoir chiffré. Une méthode de vente high ticket, dans un outil.</p><div class="spacer"></div><div class="links"><a class="btn primary" href="contact-tracker/">Découvrir</a><a class="btn" href="https://github.com/latenightsbeats1208-pixel/contact-tracker">Code</a></div></div>
+  <div class="grid" id="tools-grid"></div>
+</div></section>
+
+<section id="tout"><div class="wrap">
+  <h2>Tout récupérer d'un coup</h2>
+  <p>Trois commandes pour avoir tous les outils en version gratuite, ou les installeurs Pro un par un.</p>
+  <div class="all-in-one">
+    <strong>Code source (gratuit) — tous les dépôts</strong>
+    <pre id="clone-all"><code></code></pre>
+    <p class="note">Prérequis communs : <a href="https://nodejs.org/">Node.js</a> (22 ou plus pour JobScout, 20 ou plus pour les autres). Chaque dépôt a son guide de démarrage en 5 étapes sur sa page.</p>
+  </div>
+  <div class="all-in-one">
+    <strong>Installeurs Windows (version Pro)</strong>
+    <ul id="release-list"></ul>
+    <p class="note">Les installeurs ne sont pas encore signés : Windows affiche « Éditeur inconnu » au premier lancement. Vérifiez le SHA256 publié avec chaque fichier.</p>
   </div>
 </div></section>
 
-<section><div class="wrap">
+<section id="offre"><div class="wrap">
   <h2>Gratuit ou Pro ?</h2>
   <p>La même application dans les deux cas. La différence, c'est ce que vous avez à faire vous-même.</p>
   <table>
     <tr><th></th><th>Gratuit (GitHub)</th><th>Pro (installeur)</th></tr>
     <tr><td>Toutes les fonctions</td><td class="ok">oui</td><td class="ok">oui</td></tr>
     <tr><td>Installation</td><td>Node.js à installer, 3 commandes</td><td class="ok">un .exe, double-clic</td></tr>
-    <tr><td>Clés API</td><td>à créer vous-même (gratuites, sauf l'IA)</td><td class="ok">JobScout : IA incluse (200 dossiers). Autres : assistant de configuration</td></tr>
+    <tr><td>Clés API</td><td>à créer vous-même (gratuites, sauf l'IA)</td><td class="ok">JobScout : IA incluse (200 dossiers). Autres : fichier de configuration guidé</td></tr>
     <tr><td>Mises à jour</td><td><code>git pull</code></td><td class="ok">notification dans l'application</td></tr>
     <tr><td>Support</td><td>issues GitHub</td><td class="ok">réponse prioritaire</td></tr>
     <tr><td>Prix</td><td>0 €</td><td>paiement unique, pas d'abonnement</td></tr>
@@ -45,5 +58,37 @@
 </div></section>
 
 <footer><div class="wrap"><div>© 2026 Late Nights Tools · code sous licence MIT</div><div><a href="https://github.com/latenightsbeats1208-pixel">GitHub</a></div></div></footer>
+
+<script>
+(function () {
+  var tools = window.TOOLS || [];
+  var grid = document.getElementById("tools-grid");
+  var clone = [];
+  var rel = document.getElementById("release-list");
+  tools.forEach(function (t) {
+    var live = t.status === "live";
+    var card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML =
+      '<div class="ico">' + t.icon + '</div>' +
+      '<h3>' + t.name + (live ? '' : '<span class="status soon">bientôt</span>') + '</h3>' +
+      '<p><em>' + t.audience + '</em></p>' +
+      '<p style="margin-top:8px">' + t.tagline + '</p>' +
+      '<div class="spacer"></div>' +
+      (live
+        ? '<div class="meta">Pro : ' + t.pro + ' · v' + t.version + '</div>' +
+          '<div class="links"><a class="btn primary" href="' + t.slug + '/">Découvrir</a><a class="btn" href="' + t.repo + '">Code</a></div>'
+        : '<div class="meta">Page et dépôt en préparation.</div>');
+    grid.appendChild(card);
+    if (live) {
+      clone.push("git clone " + t.repo + ".git");
+      var li = document.createElement("li");
+      li.innerHTML = t.icon + ' <strong>' + t.name + '</strong> v' + t.version + ' — <a href="' + t.release + '">télécharger l\'installeur</a> · <a href="' + t.slug + '/#offre">version Pro</a>';
+      rel.appendChild(li);
+    }
+  });
+  document.querySelector("#clone-all code").textContent = clone.join("\n");
+})();
+</script>
 </body>
 </html>
