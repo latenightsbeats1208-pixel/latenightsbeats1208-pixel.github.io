@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>JobScout — scan multi-sites, scoring et CV + lettre IA sans invention</title>
 <meta name="description" content="JobScout scanne 7 sites d'emploi, note chaque offre selon votre profil et génère un CV + une lettre de motivation ATS d'une page, dans la langue de l'offre. Gratuit et open source ; version Pro avec IA incluse.">
-<link rel="stylesheet" href="../assets/style.css?v=20260912a">
-<script src="../assets/theme.js?v=20260912a"></script>
+<link rel="stylesheet" href="../assets/style.css?v=20260912b">
+<script src="../assets/theme.js?v=20260912b"></script>
 <script>
 // ——— À MODIFIER ICI : prix et liens de vente ———
 window.PRICING = {
@@ -22,7 +22,7 @@ window.PRICING = {
 <body>
 <header class="top"><div class="wrap">
   <a class="brand" href="../">Late Nights <span>Tools</span></a>
-  <nav><a href="#fonctions">Fonctions</a><a href="#offre">Gratuit / Pro</a><a href="#demarrer">Démarrer</a><a href="#faq">FAQ</a><a href="https://github.com/latenightsbeats1208-pixel/jobscout">GitHub</a><button class="theme-toggle" type="button">🌙</button></nav>
+  <nav><a href="#fonctions">Fonctions</a><a href="#offre">Gratuit / Pro</a><a href="#demarrer">Démarrer</a><a href="#faq">FAQ</a><a href="https://github.com/latenightsbeats1208-pixel/jobscout">GitHub</a></nav><button class="theme-toggle" type="button">🌙</button>
 </div></header>
 
 <div class="hero"><div class="wrap">
@@ -49,7 +49,7 @@ window.PRICING = {
 <section id="offre"><div class="wrap">
   <h2>Gratuit ou Pro</h2>
   <p>Le scan et le scoring sont gratuits et illimités dans les deux versions. La différence, c'est l'IA et l'installation.</p>
-  <table>
+  <div class="table-wrap">  <table>
     <tr><th></th><th>Gratuit (GitHub)</th><th>Pro</th></tr>
     <tr><td>Scan 7 sources + scoring</td><td class="ok">illimité</td><td class="ok">illimité</td></tr>
     <tr><td>CV + lettre + message IA</td><td>avec <strong>votre</strong> clé API Anthropic (≈ 5 € les 100 dossiers)</td><td class="ok"><strong>200 dossiers inclus</strong>, sans clé à créer</td></tr>
@@ -57,7 +57,7 @@ window.PRICING = {
     <tr><td>Mises à jour</td><td><code>git pull</code></td><td class="ok">notification dans l'application</td></tr>
     <tr><td>Support</td><td>issues GitHub</td><td class="ok">prioritaire</td></tr>
     <tr><td>Prix</td><td><span class="price">0 €</span></td><td><span class="price" data-price></span></td></tr>
-  </table>
+  </table></div>
   <div class="cta" style="margin-top:24px"><a class="btn primary" data-download href="https://github.com/latenightsbeats1208-pixel/jobscout">Version gratuite (GitHub)</a><a class="btn pro" data-buy="Acheter la version Pro" href="#">Version Pro</a></div>
   <div class="callout">Après les 200 dossiers inclus : recharges, votre propre clé API, ou (à venir) un moteur IA local gratuit et illimité.</div>
 </div></section>
@@ -87,6 +87,6 @@ npm install</code></pre></li>
 </div></section>
 
 <footer><div class="wrap"><div>© 2026 Late Nights Tools · JobScout, code sous licence MIT</div><div><a href="../">Tous les outils</a> · <a href="https://github.com/latenightsbeats1208-pixel/jobscout">GitHub</a></div></div></footer>
-<script src="../assets/pricing.js?v=20260912a"></script>
+<script src="../assets/pricing.js?v=20260912b"></script>
 </body>
 </html>

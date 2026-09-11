@@ -7,11 +7,11 @@ body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-ap
 a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
 header.top{border-bottom:1px solid var(--line);background:var(--header-bg);backdrop-filter:blur(8px);position:sticky;top:0;z-index:5}
-header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
+header.top .wrap{display:flex;align-items:center;height:60px;gap:12px}
 .brand{font-weight:700;letter-spacing:.2px;color:var(--text);white-space:nowrap}.brand span{color:var(--accent)}
-nav{display:flex;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+nav{display:flex;align-items:center;flex-wrap:wrap;justify-content:flex-end;margin-left:auto}
 nav a{color:var(--muted);margin-left:18px;font-size:14px}nav a:hover{color:var(--text);text-decoration:none}
-.theme-toggle{margin-left:18px;border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:999px;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:1;display:inline-flex;align-items:center;justify-content:center}
+.theme-toggle{margin-left:18px;flex:none;border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:999px;width:36px;height:36px;cursor:pointer;font-size:16px;line-height:1;display:inline-flex;align-items:center;justify-content:center}
 .theme-toggle:hover{border-color:var(--accent)}
 .hero{padding:72px 0 40px;text-align:center}
 .hero .tag{display:inline-block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent2);border:1px solid var(--line);border-radius:999px;padding:4px 12px;margin-bottom:18px;background:var(--card)}
@@ -36,7 +36,8 @@ h2{font-size:28px;margin:0 0 8px;letter-spacing:-.01em}h2+p{color:var(--muted);m
 .products .card{display:flex;flex-direction:column}.products .card .spacer{flex:1}
 .products .card .links{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}
 .products .card .meta{font-size:13px;color:var(--muted);margin-top:10px}
-table{width:100%;border-collapse:collapse;margin-top:20px;font-size:15px}
+.table-wrap{overflow-x:auto;margin-top:20px;-webkit-overflow-scrolling:touch}
+table{width:100%;min-width:560px;border-collapse:collapse;font-size:15px}
 th,td{text-align:left;padding:12px 10px;border-bottom:1px solid var(--line);vertical-align:top}
 th{color:var(--muted);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:.06em}
 td.ok::before{content:"✓ ";color:var(--accent2)}td.no{color:var(--muted)}
@@ -56,4 +57,12 @@ summary{cursor:pointer;font-weight:600}details p{color:var(--muted);margin:10px 
 .all-in-one ul{margin:12px 0 0;padding-left:20px}.all-in-one li{margin:6px 0}
 footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);font-size:14px}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
-@media (max-width:640px){.hero{padding:48px 0 28px}nav a{margin-left:12px}.theme-toggle{margin-left:10px}}
+@media (max-width:720px){
+  header.top .wrap{display:grid;grid-template-columns:1fr auto;align-items:center;height:auto;padding:10px 20px 0;row-gap:2px}
+  .brand{grid-column:1;grid-row:1}.theme-toggle{grid-column:2;grid-row:1;margin-left:0}
+  nav{grid-column:1/-1;grid-row:2;justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;white-space:nowrap;margin:0 -20px;padding:6px 20px 10px;scrollbar-width:none}
+  nav::-webkit-scrollbar{display:none}nav a{margin:0 18px 0 0}
+  .hero{padding:44px 0 28px}.hero p.lead{font-size:17px}h2{font-size:24px}
+  .cta .btn{width:100%;text-align:center}
+  .steps li{padding-left:42px}
+}
