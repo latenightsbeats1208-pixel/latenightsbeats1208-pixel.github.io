@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Genius Scout — les producteurs d'un album et leur Instagram, vérifiés</title>
+<meta name="description" content="Collez un album : Genius Scout croise Genius, Spotify, MusicBrainz et Discogs pour lister les producteurs de chaque titre, puis retrouve et vérifie leur Instagram. Gratuit et open source ; version Pro en installeur 1-clic.">
+<link rel="stylesheet" href="../assets/style.css">
+<script>
+// ——— À MODIFIER ICI : prix et liens de vente ———
+window.PRICING = {
+  full: 39,
+  launch: 19,
+  buyUrl: "",
+  contactUrl: "https://github.com/latenightsbeats1208-pixel",
+  repoUrl: "https://github.com/latenightsbeats1208-pixel/genius-scout",
+  downloadUrl: ""
+};
+</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="../">Late Nights <span>Tools</span></a>
+  <nav><a href="#fonctions">Fonctions</a><a href="#offre">Gratuit / Pro</a><a href="#demarrer">Démarrer</a><a href="#faq">FAQ</a><a href="https://github.com/latenightsbeats1208-pixel/genius-scout">GitHub</a></nav>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <div class="tag">Beatmakers · placement de prods · networking</div>
+  <h1>Genius Scout</h1>
+  <p class="lead">Vous voulez placer vos prods ? Les portes, ce sont les producteurs qui travaillent déjà avec l'artiste. Genius Scout lit les crédits d'un album, en sort la liste des producteurs titre par titre, et retrouve leur Instagram avec une preuve — jamais un faux compte.</p>
+  <div class="cta"><a class="btn primary" data-download href="https://github.com/latenightsbeats1208-pixel/genius-scout">Télécharger gratuitement</a><a class="btn pro" data-buy="Version Pro — installeur 1-clic" href="#offre">Version Pro</a></div>
+  <p class="note">Windows (installeur Pro), Mac et Linux via le code source. Accessible depuis votre téléphone sur le même Wi-Fi.</p>
+</div></div>
+
+<section id="fonctions"><div class="wrap">
+  <h2>Ce que Genius Scout fait</h2>
+  <p>Un scan = un album. Le résultat : des producteurs, leurs titres, leur Instagram, et un carnet de contacts prêt pour la prospection.</p>
+  <div class="grid">
+    <div class="card"><div class="ico">💿</div><h3>Un lien d'album suffit</h3><p>Collez un lien Spotify ou cherchez l'album sur Genius. La tracklist est reconstituée et chaque titre est rapproché entre les sources.</p></div>
+    <div class="card"><div class="ico">🧩</div><h3>4 sources de crédits, fusionnées</h3><p>Genius, Spotify (crédits du lecteur), MusicBrainz et Discogs. Les alias sont regroupés, un producteur cité par deux sources est marqué « double source ».</p></div>
+    <div class="card"><div class="ico">📸</div><h3>Instagram retrouvé et vérifié</h3><p>Candidats trouvés via Genius et Google, puis arbitrage : le handle ou le nom affiché doit correspondre au producteur, avec des indices musicaux. En cas de doute, la réponse est « non ». Option : validation par Claude sur les cas ambigus.</p></div>
+    <div class="card"><div class="ico">📧</div><h3>Carnet de contacts</h3><p>Emails et contacts management extraits des bios, statut « contacté », relance suggérée à 14 jours, export CSV.</p></div>
+    <div class="card"><div class="ico">🩺</div><h3>Diagnostic avant chaque scan</h3><p>Chrome dédié, Spotify, Instagram, Claude : chaque dépendance est testée et affichée avant de lancer. Un scan dégradé, ça se voit tout de suite.</p></div>
+    <div class="card"><div class="ico">🕓</div><h3>File d'attente et historique</h3><p>Lancez plusieurs albums, suivez la progression en direct, retrouvez tous les scans passés. Base SQLite locale, hors de tout dossier synchronisé.</p></div>
+  </div>
+</div></section>
+
+<section id="offre"><div class="wrap">
+  <h2>Gratuit ou Pro</h2>
+  <p>Toutes les fonctions sont dans le code source. La version Pro enlève l'installation et la configuration.</p>
+  <table>
+    <tr><th></th><th>Gratuit (GitHub)</th><th>Pro</th></tr>
+    <tr><td>Scans, crédits, Instagram, contacts</td><td class="ok">tout</td><td class="ok">tout</td></tr>
+    <tr><td>Installation</td><td>Node.js 20+, Chrome, 3 commandes</td><td class="ok">installeur Windows, Chrome dédié configuré au premier lancement</td></tr>
+    <tr><td>Clés API</td><td>Spotify et Discogs à créer (gratuites, 5 min) ; Anthropic optionnelle</td><td class="ok">fichier de configuration pré-rempli, guide pas à pas</td></tr>
+    <tr><td>Mises à jour</td><td><code>git pull</code></td><td class="ok">installeur suivant, notification</td></tr>
+    <tr><td>Support</td><td>issues GitHub</td><td class="ok">prioritaire</td></tr>
+    <tr><td>Prix</td><td><span class="price">0 €</span></td><td><span class="price" data-price></span></td></tr>
+  </table>
+  <div class="cta" style="margin-top:24px"><a class="btn primary" data-download href="https://github.com/latenightsbeats1208-pixel/genius-scout">Version gratuite (GitHub)</a><a class="btn pro" data-buy="Acheter la version Pro" href="#">Version Pro</a></div>
+</div></section>
+
+<section id="demarrer"><div class="wrap">
+  <h2>Démarrer en 5 minutes (version gratuite)</h2>
+  <p>Prérequis : <a href="https://nodejs.org/">Node.js 20.9 ou plus</a>, Google Chrome, un compte Spotify et un compte Discogs (pour les clés gratuites).</p>
+  <ol class="steps">
+    <li><strong>Récupérer le code</strong><pre><code>git clone https://github.com/latenightsbeats1208-pixel/genius-scout.git
+cd genius-scout
+npm install</code></pre></li>
+    <li><strong>Créer les clés (gratuites)</strong><p>Spotify : <a href="https://developer.spotify.com/dashboard">developer.spotify.com/dashboard</a> → Create app → copier Client ID et Client Secret. Discogs : <a href="https://www.discogs.com/settings/developers">discogs.com/settings/developers</a> → Generate token. Anthropic (optionnel, validation IA des cas ambigus) : <a href="https://console.anthropic.com/">console.anthropic.com</a>.</p><pre><code>copy .env.local.example .env.local
+# coller SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET, DISCOGS_TOKEN (et ANTHROPIC_API_KEY si voulu)</code></pre></li>
+    <li><strong>Lancer</strong><pre><code>Genius-Scout.bat        # Windows : ouvre le Chrome dédié + le serveur + l'app
+npm run dev             # Mac/Linux : puis ouvrir http://localhost:3033</code></pre><p>Au premier lancement, connectez-vous à Spotify et Instagram dans le Chrome dédié (il garde la session).</p></li>
+    <li><strong>Scanner un album</strong><p>Collez un lien Spotify ou tapez « artiste album ». Le scan tourne en quelques minutes ; les producteurs apparaissent au fur et à mesure avec leur statut Instagram (confirmé / probable / introuvable).</p></li>
+    <li><strong>Prospecter</strong><p>Onglet Contacts : « Compléter les emails » lit les bios, puis marquez qui vous avez contacté. L'app rappelle les relances à 14 jours.</p></li>
+  </ol>
+</div></section>
+
+<section id="faq"><div class="wrap">
+  <h2>Questions fréquentes</h2>
+  <details><summary>Pourquoi un Chrome « dédié » ?</summary><p>Spotify et Instagram bloquent les lectures anonymes. Genius Scout pilote un profil Chrome séparé, connecté à vos comptes, pour lire ce que vous verriez vous-même. Vos identifiants ne sont jamais stockés par l'app.</p></details>
+  <details><summary>Est-ce qu'Instagram peut limiter mon compte ?</summary><p>Oui si vous lisez des centaines de profils par jour. L'app espace les requêtes, met en cache 6 heures, et s'arrête 30 minutes dès qu'Instagram répond « trop de requêtes ». Restez raisonnable : quelques dizaines de profils par jour.</p></details>
+  <details><summary>Comment l'app évite les faux comptes Instagram ?</summary><p>Un compte n'est « confirmé » que si son handle ou son nom correspond au producteur ET qu'un indice musical ou une mention de l'artiste le corrobore. La validation IA (optionnelle) ne peut que rétrograder un candidat, jamais le promouvoir.</p></details>
+  <details><summary>Sans clé Anthropic, ça marche ?</summary><p>Oui. Le mode par défaut est heuristique. Claude n'intervient que sur les cas ambigus, si une clé est présente (quelques centimes par scan).</p></details>
+  <details><summary>Où sont mes données ?</summary><p>Dans <code>GeniusScoutData</code> à la racine de votre dossier utilisateur (base SQLite + profil Chrome). Hors OneDrive, hors des dossiers nettoyés automatiquement.</p></details>
+</div></section>
+
+<footer><div class="wrap"><div>© 2026 Late Nights Tools · Genius Scout, code sous licence MIT</div><div><a href="../">Tous les outils</a> · <a href="https://github.com/latenightsbeats1208-pixel/genius-scout">GitHub</a></div></div></footer>
+<script src="../assets/pricing.js"></script>
+</body>
+</html>

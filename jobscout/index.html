@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JobScout — scan multi-sites, scoring et CV + lettre IA sans invention</title>
+<meta name="description" content="JobScout scanne 7 sites d'emploi, note chaque offre selon votre profil et génère un CV + une lettre de motivation ATS d'une page, dans la langue de l'offre. Gratuit et open source ; version Pro avec IA incluse.">
+<link rel="stylesheet" href="../assets/style.css">
+<script>
+// ——— À MODIFIER ICI : prix et liens de vente ———
+window.PRICING = {
+  full: 49,            // prix normal (€)
+  launch: 25,          // prix de lancement (€) — mettre 0 pour ne pas l'afficher
+  buyUrl: "",          // lien de paiement Lemon Squeezy / Stripe — vide = bouton « bientôt »
+  contactUrl: "https://github.com/latenightsbeats1208-pixel",
+  repoUrl: "https://github.com/latenightsbeats1208-pixel/jobscout",
+  downloadUrl: ""      // lien direct vers la Release GitHub (.exe) quand elle existe
+};
+</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="../">Late Nights <span>Tools</span></a>
+  <nav><a href="#fonctions">Fonctions</a><a href="#offre">Gratuit / Pro</a><a href="#demarrer">Démarrer</a><a href="#faq">FAQ</a><a href="https://github.com/latenightsbeats1208-pixel/jobscout">GitHub</a></nav>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <div class="tag">Recherche d'emploi · 100 % local · zéro invention</div>
+  <h1>JobScout</h1>
+  <p class="lead">Un scan de 7 sites d'emploi, un score par offre calculé sur votre vrai profil, et un dossier de candidature (CV + lettre, une page, ATS) généré dans la langue de l'annonce — sans jamais inventer une compétence que vous n'avez pas.</p>
+  <div class="cta"><a class="btn primary" data-download href="https://github.com/latenightsbeats1208-pixel/jobscout">Télécharger gratuitement</a><a class="btn pro" data-buy="Version Pro — IA incluse" href="#offre">Version Pro</a></div>
+  <p class="note">Windows, Mac, Linux (code source). Installeur Windows en version Pro.</p>
+</div></div>
+
+<section id="fonctions"><div class="wrap">
+  <h2>Ce que JobScout fait</h2>
+  <p>Chaque étape est visible et vérifiable. Vos données restent dans une base SQLite sur votre disque.</p>
+  <div class="grid">
+    <div class="card"><div class="ico">🔎</div><h3>7 sources, un seul scan</h3><p>Welcome to the Jungle, LinkedIn, APEC, HelloWork, France Travail, Talent.com (9 pays) et Civiweb pour les V.I.E. Chaque source s'active ou se coupe d'un clic.</p></div>
+    <div class="card"><div class="ico">🎯</div><h3>Scoring local, instantané, gratuit</h3><p>6 critères : secteur, compétences (une compétence prouvée par une expérience pèse plus qu'une compétence listée), pays, contrat, langue, durée V.I.E. Aucun appel IA, donc illimité.</p></div>
+    <div class="card"><div class="ico">📄</div><h3>Votre CV lu et structuré</h3><p>PDF, DOCX ou image (OCR). Extraction par Claude avec garde-fou anti-hallucination : une entreprise ou une compétence absente du CV est supprimée.</p></div>
+    <div class="card"><div class="ico">✍️</div><h3>CV + lettre, une page, ATS</h3><p>PDF et DOCX, boucle de rétrécissement garantissant une page A4, relecture par un correcteur, langue détectée par offre (français ou anglais).</p></div>
+    <div class="card"><div class="ico">🚫</div><h3>Zéro invention, par construction</h3><p>Chaque puce reformule un fait du profil. Un validateur compare le document généré au profil et retire ce qui n'est pas ancré. Les prompts appliquent une règle de calibration : la précision d'une affirmation ne dépasse jamais la preuve.</p></div>
+    <div class="card"><div class="ico">📊</div><h3>Suivi des candidatures</h3><p>Statuts, import et export Excel, message court pour les formulaires V.I.E, plusieurs profils.</p></div>
+  </div>
+</div></section>
+
+<section id="offre"><div class="wrap">
+  <h2>Gratuit ou Pro</h2>
+  <p>Le scan et le scoring sont gratuits et illimités dans les deux versions. La différence, c'est l'IA et l'installation.</p>
+  <table>
+    <tr><th></th><th>Gratuit (GitHub)</th><th>Pro</th></tr>
+    <tr><td>Scan 7 sources + scoring</td><td class="ok">illimité</td><td class="ok">illimité</td></tr>
+    <tr><td>CV + lettre + message IA</td><td>avec <strong>votre</strong> clé API Anthropic (≈ 5 € les 100 dossiers)</td><td class="ok"><strong>200 dossiers inclus</strong>, sans clé à créer</td></tr>
+    <tr><td>Installation</td><td>Node.js 22+, 4 commandes</td><td class="ok">installeur Windows, double-clic</td></tr>
+    <tr><td>Mises à jour</td><td><code>git pull</code></td><td class="ok">notification dans l'application</td></tr>
+    <tr><td>Support</td><td>issues GitHub</td><td class="ok">prioritaire</td></tr>
+    <tr><td>Prix</td><td><span class="price">0 €</span></td><td><span class="price" data-price></span></td></tr>
+  </table>
+  <div class="cta" style="margin-top:24px"><a class="btn primary" data-download href="https://github.com/latenightsbeats1208-pixel/jobscout">Version gratuite (GitHub)</a><a class="btn pro" data-buy="Acheter la version Pro" href="#">Version Pro</a></div>
+  <div class="callout">Après les 200 dossiers inclus : recharges, votre propre clé API, ou (à venir) un moteur IA local gratuit et illimité.</div>
+</div></section>
+
+<section id="demarrer"><div class="wrap">
+  <h2>Démarrer en 5 minutes (version gratuite)</h2>
+  <p>Prérequis : <a href="https://nodejs.org/">Node.js 22.5 ou plus</a>, et une clé API Anthropic (<a href="https://console.anthropic.com/">console.anthropic.com</a>, facturée à l'usage) pour la génération de documents. Le scan et le scoring marchent sans clé.</p>
+  <ol class="steps">
+    <li><strong>Récupérer le code</strong><pre><code>git clone https://github.com/latenightsbeats1208-pixel/jobscout.git
+cd jobscout
+npm install</code></pre></li>
+    <li><strong>Configurer la clé IA (optionnel)</strong><pre><code>copy .env.example .env      # Windows   |   cp .env.example .env sur Mac/Linux
+# puis ouvrir .env et coller ANTHROPIC_API_KEY=sk-ant-...</code></pre></li>
+    <li><strong>Lancer</strong><pre><code>npm run dev</code></pre><p>Ouvrir <code>http://localhost:3000</code>. L'assistant de démarrage vous demande votre CV et vos cibles (secteurs, pays, contrats).</p></li>
+    <li><strong>Scanner, trier, postuler</strong><p>Lancez un scan, triez par score, ouvrez une offre : le détail du score explique chaque point. « Générer le dossier » produit CV + lettre en PDF et DOCX.</p></li>
+    <li><strong>LinkedIn (optionnel)</strong><pre><code>npx playwright install chromium</code></pre><p>Seule cette source a besoin d'un navigateur. Les autres fonctionnent sans.</p></li>
+  </ol>
+</div></section>
+
+<section id="faq"><div class="wrap">
+  <h2>Questions fréquentes</h2>
+  <details><summary>Mes données partent-elles quelque part ?</summary><p>Non. Profil, CV, offres et documents vivent dans une base SQLite locale. Seuls les textes nécessaires à une génération sont envoyés à l'API du modèle (avec votre clé en version gratuite, via un proxy sans stockage en version Pro).</p></details>
+  <details><summary>Le CV généré peut-il contenir des choses fausses ?</summary><p>Le pipeline est conçu contre ça : consigne « zéro invention », relecture, puis un validateur qui supprime toute entreprise, compétence ou chiffre absent du profil. Relisez quand même avant d'envoyer, comme n'importe quel document.</p></details>
+  <details><summary>Combien coûte l'IA en version gratuite ?</summary><p>Environ 5 centimes par dossier (CV + lettre) sur le modèle par défaut, à votre charge via votre clé Anthropic. C'est du prépayé, pas un abonnement.</p></details>
+  <details><summary>Windows affiche « Éditeur inconnu » à l'installation de la version Pro ?</summary><p>Le premier installeur n'est pas encore signé par certificat. Cliquez « Informations complémentaires » puis « Exécuter quand même ». La signature arrive avec les prochaines versions.</p></details>
+  <details><summary>Une source ne renvoie rien ?</summary><p>Les sites tiers changent (anti-bot, API). Les sources France (APEC, HelloWork, France Travail, Talent) sont les plus fiables. Ouvrez une issue GitHub avec la source et la date : c'est corrigé en priorité.</p></details>
+</div></section>
+
+<footer><div class="wrap"><div>© 2026 Late Nights Tools · JobScout, code sous licence MIT</div><div><a href="../">Tous les outils</a> · <a href="https://github.com/latenightsbeats1208-pixel/jobscout">GitHub</a></div></div></footer>
+<script src="../assets/pricing.js"></script>
+</body>
+</html>
