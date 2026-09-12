@@ -12,7 +12,8 @@ window.TOOLS = [
     release: "https://github.com/latenightsbeats1208-pixel/jobscout/releases/latest",
     version: "3.4.8",
     pro: "Installeur Windows + 200 dossiers IA inclus",
-    status: "live"
+    status: "live",
+    demo: true          // assets/demo/<slug>.mp4 + .jpg présents
   },
   {
     slug: "genius-scout",
@@ -24,7 +25,8 @@ window.TOOLS = [
     release: "https://github.com/latenightsbeats1208-pixel/genius-scout/releases/latest",
     version: "1.0.0",
     pro: "Installeur Windows 1-clic, Chrome dédié configuré",
-    status: "live"
+    status: "live",
+    demo: true          // assets/demo/<slug>.mp4 + .jpg présents
   },
   {
     slug: "contact-tracker",
@@ -36,7 +38,8 @@ window.TOOLS = [
     release: "https://github.com/latenightsbeats1208-pixel/contact-tracker/releases/latest",
     version: "1.0.0",
     pro: "Installeur Windows + guide de vente PDF",
-    status: "live"
+    status: "live",
+    demo: true          // assets/demo/<slug>.mp4 + .jpg présents
   }
   // Prochaine application : copier une entrée ci-dessus, status "soon" tant que la page n'existe pas.
 ];

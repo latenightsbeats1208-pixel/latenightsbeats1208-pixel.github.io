@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Late Nights Tools — JobScout, Genius Scout, Contact Tracker</title>
 <meta name="description" content="Le catalogue Late Nights Tools : des outils gratuits et open source (recherche d'emploi, placement de prods, prospection musicale), avec une version Pro en installeur 1-clic. Tout récupérer d'un coup.">
-<link rel="stylesheet" href="assets/style.css?v=20260912b">
-<script src="assets/theme.js?v=20260912b"></script>
-<script src="assets/tools.js?v=20260912b"></script>
+<link rel="stylesheet" href="assets/style.css?v=20260912c">
+<script src="assets/theme.js?v=20260912c"></script>
+<script src="assets/tools.js?v=20260912c"></script>
 </head>
 <body>
 <header class="top"><div class="wrap">
@@ -70,6 +70,7 @@
     var card = document.createElement("div");
     card.className = "card";
     card.innerHTML =
+      (live && t.demo ? '<video autoplay muted loop playsinline preload="metadata" poster="assets/demo/' + t.slug + '.jpg"><source src="assets/demo/' + t.slug + '.mp4" type="video/mp4"></video>' : '') +
       '<div class="ico">' + t.icon + '</div>' +
       '<h3>' + t.name + (live ? '' : '<span class="status soon">bientôt</span>') + '</h3>' +
       '<p><em>' + t.audience + '</em></p>' +
