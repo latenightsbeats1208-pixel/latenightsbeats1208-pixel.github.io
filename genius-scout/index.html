@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Genius Scout — les producteurs d'un album et leur Instagram, vérifiés</title>
 <meta name="description" content="Collez un album : Genius Scout croise Genius, Spotify, MusicBrainz et Discogs pour lister les producteurs de chaque titre, puis retrouve et vérifie leur Instagram. Gratuit et open source ; version Pro en installeur 1-clic.">
-<link rel="stylesheet" href="../assets/style.css?v=20260912e">
-<script src="../assets/theme.js?v=20260912e"></script>
+<link rel="stylesheet" href="../assets/style.css?v=20260912f">
+<script src="../assets/theme.js?v=20260912f"></script>
 <script>
 // ——— À MODIFIER ICI : prix et liens de vente ———
 window.PRICING = {
@@ -69,7 +69,7 @@ window.PRICING = {
     <li><strong>Récupérer le code</strong><pre><code>git clone https://github.com/latenightsbeats1208-pixel/genius-scout.git
 cd genius-scout
 npm install</code></pre></li>
-    <li><strong>Créer les clés (gratuites)</strong><p>Spotify : <a href="https://developer.spotify.com/dashboard">developer.spotify.com/dashboard</a> → Create app → copier Client ID et Client Secret. Discogs : <a href="https://www.discogs.com/settings/developers">discogs.com/settings/developers</a> → Generate token. Anthropic (optionnel, validation IA des cas ambigus) : <a href="https://console.anthropic.com/">console.anthropic.com</a>.</p><pre><code>copy .env.local.example .env.local
+    <li><strong>Créer les clés (gratuites)</strong><p>Spotify : <a href="https://developer.spotify.com/dashboard">developer.spotify.com/dashboard</a> → Create app → copier Client ID et Client Secret. Discogs : <a href="https://www.discogs.com/settings/developers">discogs.com/settings/developers</a> → Generate token. Anthropic (optionnel, validation IA des cas ambigus) : <a href="https://console.anthropic.com/">console.anthropic.com</a>.</p><pre><code>copy installer\env.example .env.local
 # coller SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET, DISCOGS_TOKEN (et ANTHROPIC_API_KEY si voulu)</code></pre></li>
     <li><strong>Lancer</strong><pre><code>Genius-Scout.bat        # Windows : ouvre le Chrome dédié + le serveur + l'app
 npm run dev             # Mac/Linux : puis ouvrir http://localhost:3033</code></pre><p>Au premier lancement, connectez-vous à Spotify et Instagram dans le Chrome dédié (il garde la session).</p></li>
@@ -88,6 +88,6 @@ npm run dev             # Mac/Linux : puis ouvrir http://localhost:3033</code></
 </div></section>
 
 <footer><div class="wrap"><div>© 2026 Late Nights Tools · Genius Scout, code sous licence MIT</div><div><a href="../">Tous les outils</a> · <a href="https://github.com/latenightsbeats1208-pixel/genius-scout">GitHub</a></div></div></footer>
-<script src="../assets/pricing.js?v=20260912e"></script>
+<script src="../assets/pricing.js?v=20260912f"></script>
 </body>
 </html>

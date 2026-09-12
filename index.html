@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Late Nights Tools — outils pour beatmakers et chercheurs d’emploi</title>
 <meta name="description" content="Le catalogue Late Nights Tools : des outils gratuits et open source (recherche d’emploi, placement de prods, prospection musicale, publication de beats), avec une version Pro en installeur 1-clic.">
-<link rel="stylesheet" href="assets/style.css?v=20260912e">
-<script src="assets/theme.js?v=20260912e"></script>
-<script src="assets/tools.js?v=20260912e"></script>
+<link rel="stylesheet" href="assets/style.css?v=20260912f">
+<script src="assets/theme.js?v=20260912f"></script>
+<script src="assets/tools.js?v=20260912f"></script>
 </head>
 <body>
 <header class="top"><div class="wrap">
@@ -16,7 +16,7 @@
 </div></header>
 
 <div class="hero"><div class="wrap">
-  <div class="tag">Gratuit · open source · données 100 % locales</div>
+  <div class="tag">Gratuit · open source · vos données restent chez vous</div>
   <h1>Des outils que j'ai construits pour moi.<br>Ils sont à vous.</h1>
   <p class="lead">Le code source est public et gratuit. La version Pro, c'est le même outil sans installation à faire : un installeur Windows, les mises à jour, et pour JobScout l'IA incluse. Chaque nouvel outil arrive ici.</p>
   <div class="cta"><a class="btn primary" href="#produits">Voir les outils</a><a class="btn" href="#tout">Tout récupérer d'un coup</a></div>
@@ -25,22 +25,23 @@
 
 <section id="produits"><div class="wrap products">
   <h2>Les outils</h2>
-  <p>Chacun tourne sur votre machine. Rien n'est envoyé sur un serveur à moi.</p>
+  <p>Chacun tourne sur votre machine : profil, documents et base de données restent chez vous. Seules les générations IA de JobScout appellent un modèle — avec votre clé en version gratuite, via un relais qui ne conserve rien en version Pro.</p>
   <div class="grid" id="tools-grid"></div>
 </div></section>
 
 <section id="tout"><div class="wrap">
   <h2>Tout récupérer d'un coup</h2>
-  <p>Trois commandes pour avoir tous les outils en version gratuite, ou les installeurs Pro un par un.</p>
+  <p>Trois commandes pour avoir tous les outils en version gratuite, ou la version Pro, outil par outil.</p>
   <div class="all-in-one">
     <strong>Code source (gratuit) — tous les dépôts</strong>
     <pre id="clone-all"><code></code></pre>
     <p class="note">Prérequis communs : <a href="https://nodejs.org/">Node.js</a> (22 ou plus pour JobScout, 20 ou plus pour les autres). Chaque dépôt a son guide de démarrage en 5 étapes sur sa page.</p>
   </div>
   <div class="all-in-one">
-    <strong>Installeurs Windows (version Pro)</strong>
+    <strong>Version Pro — installeurs Windows</strong>
     <ul id="release-list"></ul>
     <p class="note">Les installeurs ne sont pas encore signés : Windows affiche « Éditeur inconnu » au premier lancement. Vérifiez le SHA256 publié avec chaque fichier.</p>
+    <p class="note">Le code source, lui, est gratuit et complet : les commandes ci-dessus suffisent pour tout faire tourner.</p>
   </div>
 </div></section>
 
@@ -90,7 +91,7 @@
     if (live) {
       clone.push("git clone " + t.repo + ".git");
       var li = document.createElement("li");
-      li.innerHTML = t.icon + ' <strong>' + t.name + '</strong> v' + t.version + ' — <a href="' + t.release + '">télécharger l\'installeur</a> · <a href="' + t.slug + '/#offre">version Pro</a>';
+      li.innerHTML = t.icon + ' <strong>' + t.name + '</strong> v' + t.version + ' — <a href="' + t.slug + '/#offre">voir la version Pro</a>';
       rel.appendChild(li);
     }
   });

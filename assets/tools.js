@@ -8,7 +8,7 @@ window.TOOLS = [
     name: "JobScout",
     icon: "🎯",
     audience: "Recherche d'emploi",
-    tagline: "Scanne 7 sites d'emploi, note chaque offre selon votre profil, génère un CV + une lettre ATS d'une page dans la langue de l'annonce, sans rien inventer.",
+    tagline: "Scanne 6 sites d'emploi, note chaque offre selon votre profil, génère un CV + une lettre ATS d'une page dans la langue de l'annonce, sans rien inventer.",
     repo: "https://github.com/latenightsbeats1208-pixel/jobscout",
     release: "https://github.com/latenightsbeats1208-pixel/jobscout/releases/latest",
     version: "3.4.8",
@@ -38,7 +38,7 @@ window.TOOLS = [
     repo: "https://github.com/latenightsbeats1208-pixel/contact-tracker",
     release: "https://github.com/latenightsbeats1208-pixel/contact-tracker/releases/latest",
     version: "1.0.0",
-    pro: "Installeur Windows + guide de vente PDF",
+    pro: "Installeur Windows, double-clic",
     status: "live",
     demo: true          // assets/demo/<slug>.mp4 + .jpg présents
   },

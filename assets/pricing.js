@@ -7,8 +7,19 @@
       (launch || full) + ' €<small> · paiement unique</small>';
   });
   document.querySelectorAll("[data-buy]").forEach(function (a) {
-    if (P.buyUrl) { a.href = P.buyUrl; a.textContent = a.getAttribute("data-buy") || "Acheter la version Pro"; }
-    else { a.href = P.contactUrl || "#"; a.classList.add("soon"); a.textContent = "Version Pro — bientôt (me prévenir)"; }
+    // Un bouton qui pointe déjà quelque part (ancre #offre du haut de page) garde sa destination :
+    // l'écraser envoyait le visiteur sur GitHub au lieu de descendre à la grille tarifaire.
+    var placeholder = a.getAttribute("href") === "#";
+    if (P.buyUrl) {
+      a.href = P.buyUrl;
+      a.textContent = a.getAttribute("data-buy") || "Acheter la version Pro";
+    } else if (placeholder) {
+      a.href = P.contactUrl || "#";
+      a.classList.add("soon");
+      a.textContent = "Version Pro — bientôt (me prévenir)";
+    } else {
+      a.classList.add("soon");
+    }
   });
   document.querySelectorAll("[data-download]").forEach(function (a) {
     a.href = P.downloadUrl || P.repoUrl;
