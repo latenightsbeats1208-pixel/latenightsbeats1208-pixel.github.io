@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Late Nights Tools — JobScout, Genius Scout, Contact Tracker</title>
-<meta name="description" content="Le catalogue Late Nights Tools : des outils gratuits et open source (recherche d'emploi, placement de prods, prospection musicale), avec une version Pro en installeur 1-clic. Tout récupérer d'un coup.">
-<link rel="stylesheet" href="assets/style.css?v=20260912d">
-<script src="assets/theme.js?v=20260912d"></script>
-<script src="assets/tools.js?v=20260912d"></script>
+<title>Late Nights Tools — outils pour beatmakers et chercheurs d’emploi</title>
+<meta name="description" content="Le catalogue Late Nights Tools : des outils gratuits et open source (recherche d’emploi, placement de prods, prospection musicale, publication de beats), avec une version Pro en installeur 1-clic.">
+<link rel="stylesheet" href="assets/style.css?v=20260912e">
+<script src="assets/theme.js?v=20260912e"></script>
+<script src="assets/tools.js?v=20260912e"></script>
 </head>
 <body>
 <header class="top"><div class="wrap">
@@ -68,18 +68,23 @@
   var rel = document.getElementById("release-list");
   tools.forEach(function (t) {
     var live = t.status === "live";
+    var preview = t.status === "preview";
+    var visible = live || preview;   // page produit consultable
     var card = document.createElement("div");
     card.className = "card";
     card.innerHTML =
-      (live && t.demo ? '<video autoplay muted loop playsinline preload="metadata" poster="assets/demo/' + t.slug + '.jpg"><source src="assets/demo/' + t.slug + '.mp4" type="video/mp4"></video>' : '') +
+      (visible && t.demo ? '<video autoplay muted loop playsinline preload="metadata" poster="assets/demo/' + t.slug + '.jpg"><source src="assets/demo/' + t.slug + '.mp4" type="video/mp4"></video>' : '') +
       '<div class="ico">' + t.icon + '</div>' +
-      '<h3>' + t.name + (live ? '' : '<span class="status soon">bientôt</span>') + '</h3>' +
+      '<h3>' + t.name + (live ? '' : '<span class="status soon">' + (preview ? 'aperçu' : 'bientôt') + '</span>') + '</h3>' +
       '<p><em>' + t.audience + '</em></p>' +
       '<p style="margin-top:8px">' + t.tagline + '</p>' +
       '<div class="spacer"></div>' +
       (live
         ? '<div class="meta">Pro : ' + t.pro + ' · v' + t.version + '</div>' +
           '<div class="links"><a class="btn primary" href="' + t.slug + '/">Découvrir</a><a class="btn" href="' + t.repo + '">Code</a></div>'
+        : preview
+        ? '<div class="meta">Code source et installeur à venir.</div>' +
+          '<div class="links"><a class="btn primary" href="' + t.slug + '/">Découvrir</a></div>'
         : '<div class="meta">Page et dépôt en préparation.</div>');
     grid.appendChild(card);
     if (live) {

@@ -1,6 +1,7 @@
 // ——— CATALOGUE LATE NIGHTS TOOLS ———
 // Pour ajouter une application : une entrée ici, un dossier <slug>/index.html (copier une page existante).
-// status : "live" (page + dépôt en ligne) | "soon" (annoncée, pas encore disponible)
+// status : "live" (page + dépôt en ligne) | "preview" (page en ligne, dépôt et installeur à venir)
+//          | "soon" (annoncée, ni page ni dépôt)
 window.TOOLS = [
   {
     slug: "jobscout",
@@ -39,6 +40,19 @@ window.TOOLS = [
     version: "1.0.0",
     pro: "Installeur Windows + guide de vente PDF",
     status: "live",
+    demo: true          // assets/demo/<slug>.mp4 + .jpg présents
+  },
+  {
+    slug: "drop",
+    name: "Drop",
+    icon: "🚀",
+    audience: "Beatmakers · publication quotidienne",
+    tagline: "Publie une prod de bout en bout : cover, vidéo, track BeatStars programmée et vidéo YouTube programmée avec le lien. Une demi-heure de clics en moins par prod.",
+    repo: "",
+    release: "",
+    version: "0.1",
+    pro: "Installeur Windows, ffmpeg embarqué",
+    status: "preview",
     demo: true          // assets/demo/<slug>.mp4 + .jpg présents
   }
   // Prochaine application : copier une entrée ci-dessus, status "soon" tant que la page n'existe pas.

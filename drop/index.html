@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Drop — publier une prod sur BeatStars et YouTube sans y passer la soirée</title>
+<meta name="description" content="Drop publie une prod de bout en bout : métadonnées, cover, vidéo, track BeatStars programmée et vidéo YouTube programmée avec le lien. Application locale, aperçu en cours.">
+<link rel="stylesheet" href="../assets/style.css?v=20260912e">
+<script src="../assets/theme.js?v=20260912e"></script>
+<script>
+// ——— À MODIFIER ICI : prix et liens de vente ———
+window.PRICING = {
+  full: 49,
+  launch: 25,
+  buyUrl: "",
+  contactUrl: "https://github.com/latenightsbeats1208-pixel",
+  repoUrl: "",
+  downloadUrl: ""
+};
+</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="../">Late Nights <span>Tools</span></a>
+  <nav><a href="#fonctions">Fonctions</a><a href="#comment">Comment ça marche</a><a href="#offre">Gratuit / Pro</a><a href="#demarrer">Démarrer</a><a href="#faq">FAQ</a></nav><button class="theme-toggle" type="button">🌙</button>
+</div></header>
+
+<div class="hero"><div class="wrap">
+  <div class="tag">Beatmakers · publication quotidienne · aperçu</div>
+  <h1>Drop</h1>
+  <p class="lead">Vous sortez une prod par jour. Chacune vous coûte une demi-heure de clics : déposer le master, trouver une cover, remplir le formulaire, poser la date, faire la vidéo, recopier le lien dans la description. Drop fait tout ça et vous rend la soirée.</p>
+  <div class="cta"><a class="btn primary" href="#comment">Voir comment ça marche</a><a class="btn pro" data-buy="Version Pro — bientôt" href="#offre">Version Pro</a></div>
+  <p class="note">Application locale. Aperçu en cours : le code source et l'installeur arrivent.</p>
+  <figure class="demo"><video autoplay muted loop playsinline preload="metadata" poster="../assets/demo/drop.jpg"><source src="../assets/demo/drop.mp4" type="video/mp4"></video><figcaption>Démonstration sur des prods fictives : tableau des étapes, fiche, calendrier, réglages.</figcaption></figure>
+</div></div>
+
+<section id="fonctions"><div class="wrap">
+  <h2>Ce que Drop fait</h2>
+  <p>Une prod entre d'un côté, une track programmée et une vidéo programmée sortent de l'autre.</p>
+  <div class="grid">
+    <div class="card"><div class="ico">📥</div><h3>Vos fichiers, reconnus seuls</h3><p>Déposez master, stems et pochette dans un dossier. Drop lit vos noms de fichiers (<code>NOM key BPM (collabs)</code>) et en tire le titre, le BPM et la tonalité. Vous corrigez ce qui vous chante.</p></div>
+    <div class="card"><div class="ico">🎨</div><h3>La cover trouvée pour vous</h3><p>La photo officielle de l'artiste type beat via Deezer, votre propre image, ou une cover générée. Toujours en 1000×1000, prête pour BeatStars.</p></div>
+    <div class="card"><div class="ico">🎬</div><h3>La vidéo YouTube fabriquée</h3><p>Cover et audio assemblés en 1920×1080, plus un MP3 taggé de votre voix si vous le voulez. Une prod de deux minutes est rendue en quelques secondes.</p></div>
+    <div class="card"><div class="ico">🟦</div><h3>BeatStars rempli et programmé</h3><p>Dépôt du master, artwork, stems, tonalité, BPM, tags, genres, date de sortie, puis publication. Le lien de partage est récupéré automatiquement.</p></div>
+    <div class="card"><div class="ico">▶️</div><h3>YouTube programmé avec le lien</h3><p>Votre brouillon existant reçoit le titre, la description au bon gabarit avec le vrai lien BeatStars, et sa date de publication. Ou Drop téléverse la vidéo qu'il vient de fabriquer.</p></div>
+    <div class="card"><div class="ico">📅</div><h3>Un créneau par jour, sans trou</h3><p>Drop connaît vos dates déjà prises et propose le prochain créneau libre : 18h00 pour BeatStars, 18h30 pour YouTube. Vos jours réservés sont respectés.</p></div>
+    <div class="card"><div class="ico">🔁</div><h3>Une panne n'efface rien</h3><p>Chaque étape se relance seule. Si la publication s'interrompt, Drop repart de la track déjà créée au lieu d'en faire une deuxième sur votre compte.</p></div>
+    <div class="card"><div class="ico">🎹</div><h3>Le rendu FL Studio, en option</h3><p>Sur Windows, Drop peut ouvrir votre projet et rendre master et stems séparés. Sinon, déposez votre master déjà rendu : l'étape est facultative.</p></div>
+  </div>
+</div></section>
+
+<section id="comment"><div class="wrap">
+  <h2>Comment ça marche</h2>
+  <p>Sept étapes, visibles une par une. Vous pouvez toutes les lancer d'un coup, ou reprendre celle qui a échoué.</p>
+  <ol class="steps">
+    <li><strong>Import</strong><p>Drop scanne votre dossier d'entrée, regroupe master, stems et pochette par prod, et mesure la durée.</p></li>
+    <li><strong>Métadonnées</strong><p>Titre au format <code>ARTISTE TYPE BEAT - NOM</code>, tags, genres, et les deux dates au prochain créneau libre. L'artiste type beat, c'est vous qui le choisissez : personne ne le devine à votre place.</p></li>
+    <li><strong>Cover</strong><p>Deezer, votre fichier, ou générée.</p></li>
+    <li><strong>Rendu</strong><p>MP3 taggé et vidéo, par ffmpeg.</p></li>
+    <li><strong>BeatStars</strong><p>Un navigateur dédié remplit le formulaire d'une traite et publie. Drop contrôle que tout est valide avant de cliquer : sans genre ou sans date, il refuse de publier plutôt que de perdre votre saisie.</p></li>
+    <li><strong>YouTube</strong><p>Mise à jour du brouillon ou téléversement, avec relecture : si la programmation n'est pas confirmée par YouTube, l'étape échoue franchement au lieu de vous faire croire que c'est fait.</p></li>
+    <li><strong>Fait</strong><p>Les deux liens sont enregistrés, le calendrier avance.</p></li>
+  </ol>
+  <div class="callout">BeatStars n'a pas d'interface de programmation publique : Drop pilote un navigateur dédié, comme vous le feriez à la main, mais sans se tromper de champ. Vous vous y connectez une seule fois ; vos identifiants ne sont jamais demandés ni enregistrés par l'application.</div>
+</div></section>
+
+<section id="offre"><div class="wrap">
+  <h2>Gratuit ou Pro</h2>
+  <p>Comme les autres outils de la maison : le code source sera public et gratuit, la version Pro vous épargne l'installation.</p>
+  <div class="table-wrap">  <table>
+    <tr><th></th><th>Gratuit (bientôt sur GitHub)</th><th>Pro</th></tr>
+    <tr><td>Toutes les étapes</td><td class="ok">oui</td><td class="ok">oui</td></tr>
+    <tr><td>Installation</td><td>Node.js, ffmpeg, 3 commandes</td><td class="ok">installeur Windows, tout embarqué</td></tr>
+    <tr><td>Comptes</td><td>vos comptes BeatStars et YouTube</td><td class="ok">les mêmes, avec un assistant de connexion</td></tr>
+    <tr><td>Rendu FL Studio</td><td class="ok">inclus</td><td class="ok">inclus</td></tr>
+    <tr><td>Mises à jour</td><td><code>git pull</code></td><td class="ok">notification dans l'application</td></tr>
+    <tr><td>Prix</td><td><span class="price">0 €</span></td><td><span class="price" data-price></span></td></tr>
+  </table></div>
+  <div class="cta" style="margin-top:24px"><a class="btn pro" data-buy="Me prévenir de la sortie" href="#">Version Pro</a></div>
+</div></section>
+
+<section id="demarrer"><div class="wrap">
+  <h2>Ce qu'il vous faudra</h2>
+  <p>Rien d'exotique, et tout est gratuit sauf votre compte BeatStars.</p>
+  <ol class="steps">
+    <li><strong>Node.js et ffmpeg</strong><p><a href="https://nodejs.org/">Node.js 20 ou plus</a> et <a href="https://ffmpeg.org/">ffmpeg</a> dans le PATH. La version Pro les embarquera.</p></li>
+    <li><strong>Un compte BeatStars</strong><p>Pro si vous vendez des stems. Vous vous connectez une fois dans la fenêtre dédiée de Drop.</p></li>
+    <li><strong>Une chaîne YouTube et une clé d'accès</strong><p>Un projet Google Cloud avec l'API YouTube Data v3 et un identifiant OAuth « application de bureau ». Gratuit, dix minutes, guidé dans les réglages.</p></li>
+    <li><strong>FL Studio, si vous voulez le rendu automatique</strong><p>Windows uniquement, et facultatif : un master déjà rendu suffit.</p></li>
+  </ol>
+</div></section>
+
+<section id="faq"><div class="wrap">
+  <h2>Questions fréquentes</h2>
+  <details><summary>Est-ce que ça risque d'abîmer mon compte ?</summary><p>Drop ne supprime ni ne dépublie jamais rien. Avant de publier, il vérifie que le formulaire est complet et refuse de cliquer sinon. Sur YouTube, il ne touche qu'à la vidéo que vous désignez, et il reporte les réglages que l'interface de programmation remettrait à zéro. Chaque échec est accompagné d'une capture d'écran.</p></details>
+  <details><summary>Mes identifiants sont-ils stockés quelque part ?</summary><p>Non. Vous vous connectez vous-même dans la fenêtre dédiée ; c'est votre navigateur qui garde la session, sur votre machine. Drop ne vous demande jamais votre mot de passe.</p></details>
+  <details><summary>Et si une étape plante en plein milieu ?</summary><p>Rien n'est perdu. La track déjà créée est retenue, et la relance repart de là, sans créer de doublon. Le journal de chaque étape reste consultable.</p></details>
+  <details><summary>Combien de temps par prod ?</summary><p>Sur un vrai drop : quelques secondes pour le rendu, une poignée de secondes entre le clic de publication et la récupération du lien, autant pour la programmation YouTube. Le gros du temps restant, c'est l'analyse audio de BeatStars, qu'on ne contrôle pas.</p></details>
+  <details><summary>Ça marche sur Mac ou Linux ?</summary><p>L'application oui. Le rendu FL Studio, non : il pilote l'interface de FL sous Windows. Déposez votre master rendu et tout le reste fonctionne.</p></details>
+  <details><summary>Quand est-ce disponible ?</summary><p>Le premier drop complet a été publié le 12 septembre 2026. Le code source part sur GitHub dès que la version est jugée bonne, l'installeur suivra.</p></details>
+</div></section>
+
+<footer><div class="wrap"><div>© 2026 Late Nights Tools · Drop</div><div><a href="../">Tous les outils</a></div></div></footer>
+<script src="../assets/pricing.js?v=20260912e"></script>
+</body>
+</html>
