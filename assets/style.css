@@ -27,6 +27,7 @@ nav a{color:var(--muted);margin-left:18px;font-size:14px}nav a:hover{color:var(-
 .note{font-size:13px;color:var(--muted);margin-top:14px}
 .demo{margin:36px auto 0;max-width:960px;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--card);box-shadow:0 12px 40px rgba(0,0,0,.12)}
 .demo video{display:block;width:100%;height:auto;aspect-ratio:16/10;background:var(--bg2)}
+.demo.intro{max-width:880px}.demo.intro video{aspect-ratio:16/9}
 .demo figcaption{font-size:13px;color:var(--muted);padding:8px 14px;border-top:1px solid var(--line)}
 .products .card video{display:block;width:100%;aspect-ratio:16/10;border-radius:10px;border:1px solid var(--line);margin:0 0 12px;background:var(--bg2);object-fit:cover}
 section{padding:48px 0;border-top:1px solid var(--line)}
