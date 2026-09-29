@@ -14,7 +14,7 @@ window.PRICING = {
   launch: 15,
   buyUrl: "",
   contactUrl: "https://github.com/latenightsbeats1208-pixel",
-  repoUrl: "https://github.com/latenightsbeats1208-pixel/contact-tracker",
+  repoUrl: "",
   downloadUrl: ""
 };
 </script>
@@ -22,15 +22,15 @@ window.PRICING = {
 <body>
 <header class="top"><div class="wrap">
   <a class="brand" href="../">Late Nights <span>Tools</span></a>
-  <nav><a href="#fonctions">Fonctions</a><a href="#methode">Méthode</a><a href="#offre">Gratuit / Pro</a><a href="#demarrer">Démarrer</a><a href="https://github.com/latenightsbeats1208-pixel/contact-tracker">GitHub</a></nav><button class="theme-toggle" type="button">🌙</button>
+  <nav><a href="#fonctions">Fonctions</a><a href="#methode">Méthode</a><a href="#offre">Gratuit / Pro</a><a href="#demarrer">Démarrer</a></nav><button class="theme-toggle" type="button">🌙</button>
 </div></header>
 
 <div class="hero"><div class="wrap">
   <div class="tag">Beatmakers · producteurs · vente high ticket</div>
   <h1>Contact Tracker</h1>
   <p class="lead">Un CRM fait pour une seule chose : transformer des artistes repérés sur TikTok et Instagram en clients. Pipeline en 11 étapes, une prochaine action datée sur chaque fiche, les scripts de DM et d'appel au bon moment, et un entonnoir qui vous dit où ça casse.</p>
-  <div class="cta"><a class="btn primary" data-download href="https://github.com/latenightsbeats1208-pixel/contact-tracker">Télécharger gratuitement</a><a class="btn pro" data-buy="Version Pro — installeur Windows" href="#offre">Version Pro</a></div>
-  <p class="note">Fichier local, aucune base à installer. Windows (installeur Pro), Mac et Linux via le code source.</p>
+  <div class="cta"><a class="btn primary" href="#demarrer">Bientôt disponible</a><a class="btn pro" data-buy="Version Pro — installeur Windows" href="#offre">Version Pro</a></div>
+  <p class="note">Fichier local, aucune base à installer. Code source et installeur Windows en préparation.</p>
   <figure class="demo"><video autoplay muted loop playsinline preload="metadata" poster="../assets/demo/contact-tracker.jpg"><source src="../assets/demo/contact-tracker.mp4" type="video/mp4"></video><figcaption>Démonstration sur des contacts fictifs : pipeline, fiche et scripts, agenda, métriques.</figcaption></figure>
 </div></div>
 
@@ -62,7 +62,7 @@ window.PRICING = {
 <section id="offre"><div class="wrap">
   <h2>Gratuit ou Pro</h2>
   <div class="table-wrap">  <table>
-    <tr><th></th><th>Gratuit (GitHub)</th><th>Pro</th></tr>
+    <tr><th></th><th>Gratuit (code source, à venir)</th><th>Pro</th></tr>
     <tr><td>CRM, pipeline, scripts, entonnoir</td><td class="ok">tout</td><td class="ok">tout</td></tr>
     <tr><td>Installation</td><td>Node.js 20+, 3 commandes</td><td class="ok">installeur Windows, double-clic</td></tr>
     <tr><td>Guide de vente complet</td><td>dans le dépôt (Markdown)</td><td class="ok">inclus, consultable dans l'application</td></tr>
@@ -70,22 +70,12 @@ window.PRICING = {
     <tr><td>Mises à jour</td><td><code>git pull</code></td><td class="ok">installeur suivant</td></tr>
     <tr><td>Prix</td><td><span class="price">0 €</span></td><td><span class="price" data-price></span></td></tr>
   </table></div>
-  <div class="cta" style="margin-top:24px"><a class="btn primary" data-download href="https://github.com/latenightsbeats1208-pixel/contact-tracker">Version gratuite (GitHub)</a><a class="btn pro" data-buy="Acheter la version Pro" href="#">Version Pro</a></div>
+  <div class="cta" style="margin-top:24px"><a class="btn pro" data-buy="Acheter la version Pro" href="#">Version Pro</a></div>
 </div></section>
 
 <section id="demarrer"><div class="wrap">
-  <h2>Démarrer en 5 minutes (version gratuite)</h2>
-  <p>Prérequis : <a href="https://nodejs.org/">Node.js 20 ou plus</a>. Les clés Spotify sont recommandées pour l'auto-complétion (gratuites, 2 minutes).</p>
-  <ol class="steps">
-    <li><strong>Récupérer le code</strong><pre><code>git clone https://github.com/latenightsbeats1208-pixel/contact-tracker.git
-cd contact-tracker
-npm install</code></pre></li>
-    <li><strong>Configurer (optionnel)</strong><pre><code>copy .env.example .env.local
-# suivre les instructions du fichier : clés Spotify, cookie Instagram</code></pre></li>
-    <li><strong>Lancer</strong><pre><code>npm run dev</code></pre><p>Ouvrir <code>http://localhost:3200</code>. Vos contacts sont dans <code>data/contacts.json</code> (sauvegarde automatique).</p></li>
-    <li><strong>Importer vos contacts</strong><p>Bouton Importer : CSV ou Excel, vérifiez le mapping des colonnes, validez. Puis « Compléter réseaux » pour enrichir en une passe.</p></li>
-    <li><strong>Travailler l'agenda chaque jour</strong><p>Ouvrez 📅 Agenda : tout ce qui est en retard ou dû aujourd'hui, avec le message à envoyer. Cliquez « Fait ✓ », l'app programme la suite.</p></li>
-  </ol>
+  <h2>Disponibilité</h2>
+  <p>Le code source et l'installeur Windows ne sont pas encore publiés. Ils arriveront sur cette page dès qu'ils seront prêts.</p>
 </div></section>
 
 <section id="faq"><div class="wrap">
@@ -96,7 +86,7 @@ npm install</code></pre></li>
   <details><summary>Puis-je l'utiliser à plusieurs ?</summary><p>C'est un outil mono-poste. Pour une équipe, partagez le fichier de données ou attendez la version multi-utilisateurs.</p></details>
 </div></section>
 
-<footer><div class="wrap"><div>© 2026 Late Nights Tools · Contact Tracker, code sous licence MIT</div><div><a href="../">Tous les outils</a> · <a href="https://github.com/latenightsbeats1208-pixel/contact-tracker">GitHub</a></div></div></footer>
+<footer><div class="wrap"><div>© 2026 Late Nights Tools · Contact Tracker</div><div><a href="../">Tous les outils</a></div></div></footer>
 <script src="../assets/pricing.js?v=20260912f"></script>
 </body>
 </html>

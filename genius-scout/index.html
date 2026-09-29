@@ -14,7 +14,7 @@ window.PRICING = {
   launch: 19,
   buyUrl: "",
   contactUrl: "https://github.com/latenightsbeats1208-pixel",
-  repoUrl: "https://github.com/latenightsbeats1208-pixel/genius-scout",
+  repoUrl: "",
   downloadUrl: ""
 };
 </script>
@@ -22,15 +22,15 @@ window.PRICING = {
 <body>
 <header class="top"><div class="wrap">
   <a class="brand" href="../">Late Nights <span>Tools</span></a>
-  <nav><a href="#fonctions">Fonctions</a><a href="#offre">Gratuit / Pro</a><a href="#demarrer">Démarrer</a><a href="#faq">FAQ</a><a href="https://github.com/latenightsbeats1208-pixel/genius-scout">GitHub</a></nav><button class="theme-toggle" type="button">🌙</button>
+  <nav><a href="#fonctions">Fonctions</a><a href="#offre">Gratuit / Pro</a><a href="#demarrer">Démarrer</a><a href="#faq">FAQ</a></nav><button class="theme-toggle" type="button">🌙</button>
 </div></header>
 
 <div class="hero"><div class="wrap">
   <div class="tag">Beatmakers · placement de prods · networking</div>
   <h1>Genius Scout</h1>
   <p class="lead">Vous voulez placer vos prods ? Les portes, ce sont les producteurs qui travaillent déjà avec l'artiste. Genius Scout lit les crédits d'un album, en sort la liste des producteurs titre par titre, et retrouve leur Instagram avec une preuve — jamais un faux compte.</p>
-  <div class="cta"><a class="btn primary" data-download href="https://github.com/latenightsbeats1208-pixel/genius-scout">Télécharger gratuitement</a><a class="btn pro" data-buy="Version Pro — installeur 1-clic" href="#offre">Version Pro</a></div>
-  <p class="note">Windows (installeur Pro), Mac et Linux via le code source. Accessible depuis votre téléphone sur le même Wi-Fi.</p>
+  <div class="cta"><a class="btn primary" href="#demarrer">Bientôt disponible</a><a class="btn pro" data-buy="Version Pro — installeur 1-clic" href="#offre">Version Pro</a></div>
+  <p class="note">Code source et installeur Windows en préparation.</p>
   <figure class="demo"><video autoplay muted loop playsinline preload="metadata" poster="../assets/demo/genius-scout.jpg"><source src="../assets/demo/genius-scout.mp4" type="video/mp4"></video><figcaption>Démonstration : scan d'un album, producteurs et statut Instagram, carnet de contacts.</figcaption></figure>
 </div></div>
 
@@ -51,7 +51,7 @@ window.PRICING = {
   <h2>Gratuit ou Pro</h2>
   <p>Toutes les fonctions sont dans le code source. La version Pro enlève l'installation et la configuration.</p>
   <div class="table-wrap">  <table>
-    <tr><th></th><th>Gratuit (GitHub)</th><th>Pro</th></tr>
+    <tr><th></th><th>Gratuit (code source, à venir)</th><th>Pro</th></tr>
     <tr><td>Scans, crédits, Instagram, contacts</td><td class="ok">tout</td><td class="ok">tout</td></tr>
     <tr><td>Installation</td><td>Node.js 20+, Chrome, 3 commandes</td><td class="ok">installeur Windows, Chrome dédié configuré au premier lancement</td></tr>
     <tr><td>Clés API</td><td>Spotify et Discogs à créer (gratuites, 5 min) ; Anthropic optionnelle</td><td class="ok">fichier de configuration pré-rempli, guide pas à pas</td></tr>
@@ -59,23 +59,12 @@ window.PRICING = {
     <tr><td>Support</td><td>issues GitHub</td><td class="ok">prioritaire</td></tr>
     <tr><td>Prix</td><td><span class="price">0 €</span></td><td><span class="price" data-price></span></td></tr>
   </table></div>
-  <div class="cta" style="margin-top:24px"><a class="btn primary" data-download href="https://github.com/latenightsbeats1208-pixel/genius-scout">Version gratuite (GitHub)</a><a class="btn pro" data-buy="Acheter la version Pro" href="#">Version Pro</a></div>
+  <div class="cta" style="margin-top:24px"><a class="btn pro" data-buy="Acheter la version Pro" href="#">Version Pro</a></div>
 </div></section>
 
 <section id="demarrer"><div class="wrap">
-  <h2>Démarrer en 5 minutes (version gratuite)</h2>
-  <p>Prérequis : <a href="https://nodejs.org/">Node.js 20.9 ou plus</a>, Google Chrome, un compte Spotify et un compte Discogs (pour les clés gratuites).</p>
-  <ol class="steps">
-    <li><strong>Récupérer le code</strong><pre><code>git clone https://github.com/latenightsbeats1208-pixel/genius-scout.git
-cd genius-scout
-npm install</code></pre></li>
-    <li><strong>Créer les clés (gratuites)</strong><p>Spotify : <a href="https://developer.spotify.com/dashboard">developer.spotify.com/dashboard</a> → Create app → copier Client ID et Client Secret. Discogs : <a href="https://www.discogs.com/settings/developers">discogs.com/settings/developers</a> → Generate token. Anthropic (optionnel, validation IA des cas ambigus) : <a href="https://console.anthropic.com/">console.anthropic.com</a>.</p><pre><code>copy installer\env.example .env.local
-# coller SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET, DISCOGS_TOKEN (et ANTHROPIC_API_KEY si voulu)</code></pre></li>
-    <li><strong>Lancer</strong><pre><code>Genius-Scout.bat        # Windows : ouvre le Chrome dédié + le serveur + l'app
-npm run dev             # Mac/Linux : puis ouvrir http://localhost:3033</code></pre><p>Au premier lancement, connectez-vous à Spotify et Instagram dans le Chrome dédié (il garde la session).</p></li>
-    <li><strong>Scanner un album</strong><p>Collez un lien Spotify ou tapez « artiste album ». Le scan tourne en quelques minutes ; les producteurs apparaissent au fur et à mesure avec leur statut Instagram (confirmé / probable / introuvable).</p></li>
-    <li><strong>Prospecter</strong><p>Onglet Contacts : « Compléter les emails » lit les bios, puis marquez qui vous avez contacté. L'app rappelle les relances à 14 jours.</p></li>
-  </ol>
+  <h2>Disponibilité</h2>
+  <p>Le code source et l'installeur Windows ne sont pas encore publiés. Ils arriveront sur cette page dès qu'ils seront prêts.</p>
 </div></section>
 
 <section id="faq"><div class="wrap">
@@ -87,7 +76,7 @@ npm run dev             # Mac/Linux : puis ouvrir http://localhost:3033</code></
   <details><summary>Où sont mes données ?</summary><p>Dans <code>GeniusScoutData</code> à la racine de votre dossier utilisateur (base SQLite + profil Chrome). Hors OneDrive, hors des dossiers nettoyés automatiquement.</p></details>
 </div></section>
 
-<footer><div class="wrap"><div>© 2026 Late Nights Tools · Genius Scout, code sous licence MIT</div><div><a href="../">Tous les outils</a> · <a href="https://github.com/latenightsbeats1208-pixel/genius-scout">GitHub</a></div></div></footer>
+<footer><div class="wrap"><div>© 2026 Late Nights Tools · Genius Scout</div><div><a href="../">Tous les outils</a></div></div></footer>
 <script src="../assets/pricing.js?v=20260912f"></script>
 </body>
 </html>

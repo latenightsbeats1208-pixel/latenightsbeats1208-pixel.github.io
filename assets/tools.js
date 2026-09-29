@@ -11,7 +11,7 @@ window.TOOLS = [
     tagline: "Scanne 6 sites d'emploi, note chaque offre selon votre profil, génère un CV + une lettre ATS d'une page dans la langue de l'annonce, sans rien inventer.",
     repo: "https://github.com/latenightsbeats1208-pixel/jobscout",
     release: "https://github.com/latenightsbeats1208-pixel/jobscout/releases/latest",
-    version: "3.4.8",
+    version: "3.4.9",
     pro: "Installeur Windows + 200 dossiers IA inclus",
     status: "live",
     demo: true          // assets/demo/<slug>.mp4 + .jpg présents
@@ -22,11 +22,11 @@ window.TOOLS = [
     icon: "🎛️",
     audience: "Beatmakers · placement de prods",
     tagline: "Collez un album : les producteurs de chaque titre (Genius, Spotify, MusicBrainz, Discogs) et leur Instagram vérifié, prêts pour la prospection.",
-    repo: "https://github.com/latenightsbeats1208-pixel/genius-scout",
-    release: "https://github.com/latenightsbeats1208-pixel/genius-scout/releases/latest",
+    repo: "",
+    release: "",
     version: "1.0.0",
     pro: "Installeur Windows 1-clic, Chrome dédié configuré",
-    status: "live",
+    status: "preview",
     demo: true          // assets/demo/<slug>.mp4 + .jpg présents
   },
   {
@@ -35,11 +35,11 @@ window.TOOLS = [
     icon: "📇",
     audience: "Producteurs · vente high ticket",
     tagline: "Le CRM de prospection musicale : pipeline en 11 étapes, relances datées, scripts de DM et d'appel, entonnoir chiffré. Une méthode de vente dans un outil.",
-    repo: "https://github.com/latenightsbeats1208-pixel/contact-tracker",
-    release: "https://github.com/latenightsbeats1208-pixel/contact-tracker/releases/latest",
+    repo: "",
+    release: "",
     version: "1.0.0",
     pro: "Installeur Windows, double-clic",
-    status: "live",
+    status: "preview",
     demo: true          // assets/demo/<slug>.mp4 + .jpg présents
   },
   {
