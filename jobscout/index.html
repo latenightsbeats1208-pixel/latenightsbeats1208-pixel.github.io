@@ -64,7 +64,8 @@ window.PRICING = {
 </div></section>
 
 <section id="demarrer"><div class="wrap">
-  <h2>Démarrer en 5 minutes (version gratuite)</h2>
+  <h2>Démarrer (version gratuite)</h2>
+  <p><strong>Première installation ?</strong> Suivez le <a href="https://github.com/latenightsbeats1208-pixel/jobscout/blob/main/INSTALL.md">guide pas à pas</a> : durée mesurée de chaque étape, messages normaux, dépannage. Comptez 20 à 35 minutes au total, dont 10 à 15 devant l'écran. Le premier scan (10 à 20 minutes) se fait tout seul : laissez l'ordinateur allumé, hors veille, et le terminal ouvert.</p>
   <p>Prérequis : <a href="https://nodejs.org/">Node.js 22.13 ou plus</a>, et une clé API Anthropic (<a href="https://platform.claude.com/">platform.claude.com</a>, facturée à l'usage). La clé est nécessaire dès le démarrage : l'assistant lit votre CV avec l'IA pour créer votre profil. Ensuite, le scan et le scoring n'appellent aucune IA.</p>
   <ol class="steps">
     <li><strong>Récupérer le code</strong><pre><code>git clone https://github.com/latenightsbeats1208-pixel/jobscout.git
@@ -72,7 +73,7 @@ cd jobscout
 npm ci</code></pre></li>
     <li><strong>Lancer</strong><pre><code>npm run dev</code></pre><p>Ouvrir <code>http://127.0.0.1:3000</code> (l'application n'écoute que sur votre machine).</p></li>
     <li><strong>Coller votre clé IA, puis votre CV</strong><p>L'assistant de démarrage affiche la carte « Génération IA » : collez votre clé Anthropic, elle reste sur votre machine. Importez ensuite votre CV et choisissez vos cibles (secteurs, pays, contrats).</p></li>
-    <li><strong>Scanner, trier, postuler</strong><p>Lancez un scan, triez par score, ouvrez une offre : le détail du score explique chaque point. « Générer le dossier » produit CV + lettre en PDF et DOCX.</p></li>
+    <li><strong>Scanner, trier, postuler</strong><p>Lancez un scan, triez par score, ouvrez une offre : le détail du score explique chaque point. « Générer les documents » produit CV + lettre en PDF et DOCX.</p></li>
     <li><strong>LinkedIn (optionnel)</strong><p>Seule cette source a besoin d'un navigateur. Activez-la dans Profil › Sources et cliquez « Installer le moteur LinkedIn » (~100 Mo), ou lancez <code>npm run playwright:install</code>.</p></li>
   </ol>
 </div></section>
