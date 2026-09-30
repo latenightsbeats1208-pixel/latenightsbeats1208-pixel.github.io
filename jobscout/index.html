@@ -40,10 +40,11 @@ window.PRICING = {
   <div class="grid">
     <div class="card"><div class="ico">🔎</div><h3>6 sources, un seul scan</h3><p>Welcome to the Jungle, LinkedIn, APEC, HelloWork, France Travail et Talent.com (9 pays). Chaque source s'active ou se coupe d'un clic. Civiweb (V.I.E) est temporairement hors service : Business France exige désormais une authentification.</p></div>
     <div class="card"><div class="ico">🎯</div><h3>Scoring local, instantané, gratuit</h3><p>6 critères : secteur, compétences (une compétence prouvée par une expérience pèse plus qu'une compétence listée), pays, contrat, langue, durée V.I.E. Aucun appel IA, donc illimité.</p></div>
-    <div class="card"><div class="ico">📄</div><h3>Votre CV lu et structuré</h3><p>PDF, DOCX ou image (OCR). Extraction par Claude avec garde-fou anti-hallucination : une entreprise ou une compétence absente du CV est supprimée.</p></div>
+    <div class="card"><div class="ico">📄</div><h3>Votre CV lu et structuré</h3><p>PDF, DOCX ou image (OCR). Extraction par l'IA de votre choix, avec garde-fou anti-hallucination : une entreprise ou une compétence absente du CV est supprimée.</p></div>
     <div class="card"><div class="ico">✍️</div><h3>CV + lettre, une page, ATS</h3><p>PDF et DOCX, boucle de rétrécissement garantissant une page A4, relecture par un correcteur, langue détectée par offre (français ou anglais).</p></div>
     <div class="card"><div class="ico">🚫</div><h3>Zéro invention, par construction</h3><p>Chaque puce reformule un fait du profil. Un validateur compare le document généré au profil et retire ce qui n'est pas ancré. Les prompts appliquent une règle de calibration : la précision d'une affirmation ne dépasse jamais la preuve.</p></div>
     <div class="card"><div class="ico">📊</div><h3>Suivi des candidatures</h3><p>Statuts, import et export Excel, message court pour les formulaires V.I.E, plusieurs profils.</p></div>
+    <div class="card"><div class="ico">🧠</div><h3>L'IA de votre choix</h3><p>Anthropic (Claude), OpenAI, Google Gemini, Mistral, DeepSeek, Groq, OpenRouter, ou un modèle local gratuit avec Ollama ou LM Studio : rien ne sort alors de votre machine. Les garde-fous anti-invention s'appliquent quel que soit le modèle.</p></div>
   </div>
 </div></section>
 
@@ -53,26 +54,26 @@ window.PRICING = {
   <div class="table-wrap">  <table>
     <tr><th></th><th>Gratuit (GitHub)</th><th>Pro (en préparation)</th></tr>
     <tr><td>Scan 6 sources + scoring</td><td class="ok">illimité</td><td class="ok">illimité</td></tr>
-    <tr><td>CV + lettre + message IA</td><td>avec <strong>votre</strong> clé API Anthropic (≈ 12 à 20 $ les 100 dossiers)</td><td class="ok"><strong>200 dossiers inclus</strong>, sans clé à créer</td></tr>
+    <tr><td>CV + lettre + message IA</td><td>avec <strong>votre</strong> clé IA (≈ 12 à 20 $ les 100 dossiers avec Claude, selon les tarifs du fournisseur choisi sinon), ou un modèle local gratuit</td><td class="ok"><strong>200 dossiers inclus</strong>, sans clé à créer</td></tr>
     <tr><td>Installation</td><td>Node.js 22.13+, 4 commandes</td><td class="ok">installeur Windows, double-clic</td></tr>
     <tr><td>Mises à jour</td><td><code>git pull</code></td><td class="ok">notification dans l'application</td></tr>
     <tr><td>Support</td><td>issues GitHub</td><td class="ok">prioritaire</td></tr>
     <tr><td>Prix</td><td><span class="price">0 €</span></td><td><span class="price" data-price></span></td></tr>
   </table></div>
   <div class="cta" style="margin-top:24px"><a class="btn primary" data-download href="https://github.com/latenightsbeats1208-pixel/jobscout">Version gratuite (GitHub)</a><a class="btn pro" data-buy="Acheter la version Pro" href="#">Version Pro</a></div>
-  <div class="callout">Après les 200 dossiers inclus : recharges, votre propre clé API, ou (à venir) un moteur IA local gratuit et illimité.</div>
+  <div class="callout">Après les 200 dossiers inclus : recharges, votre propre clé IA, ou un modèle local (Ollama, LM Studio), gratuit et illimité.</div>
 </div></section>
 
 <section id="demarrer"><div class="wrap">
   <h2>Démarrer (version gratuite)</h2>
   <p><strong>Première installation ?</strong> Suivez le <a href="https://github.com/latenightsbeats1208-pixel/jobscout/blob/main/INSTALL.md">guide pas à pas</a> : durée mesurée de chaque étape, messages normaux, dépannage. Comptez 20 à 35 minutes au total, dont 10 à 15 devant l'écran. Le premier scan (10 à 20 minutes) se fait tout seul : laissez l'ordinateur allumé, hors veille, et le terminal ouvert.</p>
-  <p>Prérequis : <a href="https://nodejs.org/">Node.js 22.13 ou plus</a>, et une clé API Anthropic (<a href="https://platform.claude.com/">platform.claude.com</a>, facturée à l'usage). La clé est nécessaire dès le démarrage : l'assistant lit votre CV avec l'IA pour créer votre profil. Ensuite, le scan et le scoring n'appellent aucune IA.</p>
+  <p>Prérequis : <a href="https://nodejs.org/">Node.js 22.13 ou plus</a>, et une IA : une clé API chez Anthropic (<a href="https://platform.claude.com/">platform.claude.com</a>), OpenAI, Google Gemini, Mistral, DeepSeek, Groq ou OpenRouter (facturée à l'usage, offre gratuite limitée chez certains), ou un modèle local gratuit avec <a href="https://ollama.com/download">Ollama</a> ou <a href="https://lmstudio.ai">LM Studio</a> (machine assez puissante conseillée). L'IA est nécessaire dès le démarrage : l'assistant lit votre CV pour créer votre profil. Ensuite, le scan et le scoring n'appellent aucune IA.</p>
   <ol class="steps">
     <li><strong>Récupérer le code</strong><pre><code>git clone https://github.com/latenightsbeats1208-pixel/jobscout.git
 cd jobscout
 npm ci</code></pre></li>
     <li><strong>Lancer</strong><pre><code>npm run dev</code></pre><p>Ouvrir <code>http://127.0.0.1:3000</code> (l'application n'écoute que sur votre machine).</p></li>
-    <li><strong>Coller votre clé IA, puis votre CV</strong><p>L'assistant de démarrage affiche la carte « Génération IA » : collez votre clé Anthropic, elle reste sur votre machine. Importez ensuite votre CV et choisissez vos cibles (secteurs, pays, contrats).</p></li>
+    <li><strong>Coller votre clé IA, puis votre CV</strong><p>L'assistant de démarrage affiche la carte « Génération IA » : choisissez votre fournisseur et collez votre clé (elle reste sur votre machine), ou indiquez votre serveur local. Importez ensuite votre CV et choisissez vos cibles (secteurs, pays, contrats).</p></li>
     <li><strong>Scanner, trier, postuler</strong><p>Lancez un scan, triez par score, ouvrez une offre : le détail du score explique chaque point. « Générer les documents » produit CV + lettre en PDF et DOCX.</p></li>
     <li><strong>LinkedIn (optionnel)</strong><p>Seule cette source a besoin d'un navigateur. Activez-la dans Profil › Sources et cliquez « Installer le moteur LinkedIn » (~100 Mo), ou lancez <code>npm run playwright:install</code>.</p></li>
   </ol>
@@ -80,9 +81,9 @@ npm ci</code></pre></li>
 
 <section id="faq"><div class="wrap">
   <h2>Questions fréquentes</h2>
-  <details><summary>Mes données partent-elles quelque part ?</summary><p>Non. Profil, CV, offres et documents vivent dans une base SQLite locale. Seuls les textes nécessaires à une génération sont envoyés à l'API du modèle (avec votre clé en version gratuite, via un proxy sans stockage en version Pro).</p></details>
+  <details><summary>Mes données partent-elles quelque part ?</summary><p>Non. Profil, CV, offres et documents vivent dans une base SQLite locale. Seuls les textes nécessaires à une génération sont envoyés à l'API du modèle (avec votre clé en version gratuite, via un proxy sans stockage en version Pro). Avec un modèle local (Ollama, LM Studio), rien ne quitte votre machine.</p></details>
   <details><summary>Le CV généré peut-il contenir des choses fausses ?</summary><p>Le pipeline est conçu contre ça : consigne « zéro invention », relecture, puis un validateur qui supprime toute entreprise, compétence ou chiffre absent du profil. Relisez quand même avant d'envoyer, comme n'importe quel document.</p></details>
-  <details><summary>Combien coûte l'IA en version gratuite ?</summary><p>Environ 0,12 à 0,20 $ par dossier (CV + lettre, relecture comprise) sur les modèles par défaut, selon la longueur du profil et de l'offre, à votre charge via votre clé Anthropic. C'est du prépayé, pas un abonnement.</p></details>
+  <details><summary>Combien coûte l'IA en version gratuite ?</summary><p>Avec Claude (Anthropic), environ 0,12 à 0,20 $ par dossier (CV + lettre, relecture comprise) sur les modèles par défaut, selon la longueur du profil et de l'offre. Avec un autre fournisseur, le coût suit ses tarifs ; avec un modèle local, il est nul. C'est du prépayé, pas un abonnement.</p></details>
   <details><summary>Quand sort la version Pro ?</summary><p>Elle est en préparation. La version gratuite contient déjà tout le code : seule l'installation en un clic et les crédits IA inclus la distingueront.</p></details>
   <details><summary>Une source ne renvoie rien ?</summary><p>Les sites tiers changent (anti-bot, API). Les sources France (APEC, HelloWork, France Travail, Talent) sont les plus fiables. Ouvrez une issue GitHub avec la source et la date : c'est corrigé en priorité.</p></details>
 </div></section>

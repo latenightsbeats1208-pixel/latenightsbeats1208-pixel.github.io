@@ -11,7 +11,7 @@ window.TOOLS = [
     tagline: "Scanne 6 sites d'emploi, note chaque offre selon votre profil, génère un CV + une lettre ATS d'une page dans la langue de l'annonce, sans rien inventer.",
     repo: "https://github.com/latenightsbeats1208-pixel/jobscout",
     release: "https://github.com/latenightsbeats1208-pixel/jobscout/releases/latest",
-    version: "3.4.10",
+    version: "3.4.11",
     pro: "Installeur Windows + 200 dossiers IA inclus",
     status: "live",
     demo: true          // assets/demo/<slug>.mp4 + .jpg présents
